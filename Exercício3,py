@@ -1,0 +1,3 @@
+nome= input("Guilherme Rodrigues dos Anjos")
+
+print("nome",nome)
