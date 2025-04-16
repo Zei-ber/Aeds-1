@@ -15,5 +15,3 @@ while(parada != 0):
         for i in range (5):
             if code == lista[i]:
                 valor += list[i] * quant
-        
-    
