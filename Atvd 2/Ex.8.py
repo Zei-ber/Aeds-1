@@ -69,5 +69,6 @@ while(parada != 0):
         
     if oper == 'Sair':
         parada = 0
-    elif oper not in Menu:
-        print('Confira se digitou uma operação do menu e se não há erros ortográficos.')
+    else:
+        if oper not in Menu:
+            print('Confira se digitou uma operação do menu e se não há erros ortográficos.')
