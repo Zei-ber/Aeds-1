@@ -1,24 +1,18 @@
-try:
-    parada = 1
-    while(parada != 0):
-        Num = int(input("Digite aqui o número que deseja saber se é primo (ou Sair para sair): "))                
-        if Num <= 1:
-            print("O número digitado não é primo")
-            continue
-        if Num == 2:
-            print("O número digitado é primo")
-            continue
-        if Num % 2 == 0:
-            print("O número digitado não é primo")
-            continue
-        primo = True
-        for i in range(3, int(Num**0.5) + 1, 2):
-            if Num % i == 0:
-                primo = False
+Num = int(input("Digite aqui o número que deseja saber se é primo:"))                
+if Num == 1 or Num == 0:
+    print("Caso especial")
+else:
+    if Num == 2:
+        print("O número digitado é primo")
+    elif Num % 2 == 0:
+        print("O número digitado não é primo")
+    else:
+        x = 3
+        while x<Num:
+            if Num%x == 0:
                 break
-        if primo:
-            print("O número digitado é primo")
+            x = x+2
+        if x == Num:
+            print("Este número é primo")
         else:
-            print("O número digitado não é primo")
-except (ValueError):
-    print('Saindo...')
+            print("Este número não é primo")
