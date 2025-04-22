@@ -1,15 +1,13 @@
-n = int(input("Digite quantos números primos deseja ver: "))
-contador = 0
+n = int(input("Digite a quantidade de números primos que deseja ver: "))
+primos = []
 num = 2
-while contador < n:
-    if num == 2:
-        print(num)
-        contador += 1
-    else:
-        for i in range(3, int(num**0.5) + 1, 2):
-            if num % i == 0:
-                break  
-        else:
-            print(num)  
-            contador += 1
+while len(primos) < n:
+    eh_primo = True
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            eh_primo = False
+            break
+    if eh_primo:
+        primos.append(num)
     num += 1
+print(primos)
