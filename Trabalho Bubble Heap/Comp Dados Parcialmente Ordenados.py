@@ -33,7 +33,7 @@ def heap_sort(arr):
         heapify(arr, i, 0)
 
 # Lista parcialmente ordenada
-n = 2000
+n = 10000
 dados = list(range(n))
 for i in range(0, n, 10):
     if i+1 < n:
